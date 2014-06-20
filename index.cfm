@@ -13,6 +13,8 @@
 		  #contacts.CurrentRow# - #contacts.name# - #contacts.address# - #contacts.phone#<br />
 		</cfoutput>
 
-		<a href="new.cfm">Add a new contact</a>
+		<p>
+			<a href="new.cfm">Add a new contact</a>
+		</p>
 	</body>
 </html>
