@@ -3,12 +3,8 @@
 <cfparam name="form.contactaddress" default="" />
 <cfparam name="form.contactphone" default="" />
 
-
-<html>
-<head>
-	<title>ColdFusion Address Book</title>
-</head>
-	<body>
+<cfimport taglib="customTags/" prefix="layout" />
+<layout:page section="new">
 		<h1>Add a New Contact</h1>
 
 		<cfif form.submitted>
@@ -49,6 +45,4 @@
 				<input type="hidden" name="submitted" value="1" />
 			</form>
 		</cfoutput>
-
-	</body>
-</html>
+</layout:page>
