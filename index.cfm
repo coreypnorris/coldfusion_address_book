@@ -1,4 +1,4 @@
-<cfquery name="contacts" datasource="addressbook">
+<cfquery name="contacts">
   SELECT *
   FROM contacts
 </cfquery>
