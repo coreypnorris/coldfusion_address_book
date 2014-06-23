@@ -3,7 +3,7 @@
   <html>
     <head>
       <title>ColdFusion Address Book</title>
-      <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+      <link href="admin/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
       <div class="container">
