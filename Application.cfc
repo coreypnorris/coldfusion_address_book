@@ -5,6 +5,11 @@ component {
   this.applicationTimeout = CreateTimeSpan(10, 0, 0, 0); //10 days
   this.sessionManagement = true;
   this.sessionTimeout = CreateTimeSpan(0, 0, 30, 0); //30 minutes
+  this.ormEnabled = true;
+  this.ormSettings = { logsql = true, 
+                       dbcreate = "update", 
+                       cfclocation = "com/entities" };
+  this.invokeImplicitAccessor = true;
   this.customTagPaths = [ expandPath('/myAppCustomTags') ];
   this.mappings = {
     "/foo" = expandPath('/com/myCompany/foo')
@@ -21,7 +26,12 @@ component {
 
   // the target page is passed in for reference, 
   // but you are not required to include it
-  function onRequestStart( string targetPage ) {}
+  function onRequestStart( string targetPage ) {
+    if(structKeyExists(url,'reload')){
+      onApplicationStart();
+      ormReload();
+    }
+  }
 
   function onRequest( string targetPage ) {
     include arguments.targetPage;
@@ -36,3 +46,6 @@ component {
   function onError( any Exception, string EventName ) {}
 
 }
+
+
+

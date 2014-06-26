@@ -1,7 +1,4 @@
-<cfquery name="contacts">
-  SELECT *
-  FROM contacts
-</cfquery>
+<cfset contacts = EntityLoad('contact') />
 
 <cfimport taglib="customTags/" prefix="layout" />
 

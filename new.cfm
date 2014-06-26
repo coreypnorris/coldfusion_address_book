@@ -27,17 +27,29 @@
 
   <cfoutput>
     <form id="form" action="newcontact.cfm" method="post">
-      <div>
-        <label>Name (required)</label>
-        <input name="contactname" type="text" value="#form.contactname#" />
+      <div class="row form-group">
+        <div class="col-xs-2">
+          <label>Name (required)</label>
+        </div>
+        <div class="col-xs-5">
+          <input name="contactname" type="text" value="#form.contactname#" class="form-control" />
+        </div>
       </div>
-      <div class="textarea">
-        <label>Address (required)</label>       
-        <textarea name="contactaddress" rows="6" cols="60" class="required">#form.contactaddress#</textarea>    
+      <div class="row form-group">
+        <div class="col-xs-2">
+          <label>Phone(required)</label>
+        </div>
+        <div class="col-xs-5">
+          <input name="contactphone" type="text" value="#form.contactaddress#" class="form-control" />   
+        </div>
       </div>
-      <div>
-        <label>Phone(required)</label>
-        <input name="contactphone" type="text" value="#form.contactaddress#" />   
+      <div class="row form-group">
+        <div class="col-xs-2">
+          <label>Address (required)</label>       
+        </div>
+        <div class="col-xs-5">
+          <textarea name="contactaddress" rows="6" cols="60" class="required form-control">#form.contactaddress#</textarea>    
+        </div>
       </div>
       <div>
         <input id="submitBtn" value="Submit" name="submit" type="submit" class="submitBtn" />
