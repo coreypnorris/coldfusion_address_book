@@ -13,7 +13,7 @@
               <a class="navbar-brand" href="index.cfm">Homepage</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="new.cfm">New Contact</a></li>
+              <li><a href="editContact.cfm">New Contact</a></li>
             </ul>
           </div><!-- /.container-fluid -->
         </nav>
