@@ -1,9 +1,10 @@
+<cfparam name="url.message" default="" />
 <cfif thisTag.executionMode eq "start">
   
   <html>
     <head>
       <title>ColdFusion Address Book</title>
-      <link href="admin/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+      <link href="admin/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
       <div class="container">
@@ -15,8 +16,15 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="editContact.cfm">New Contact</a></li>
             </ul>
-          </div><!-- /.container-fluid -->
+          </div>
         </nav>
+        <div class="row-fluid">
+          <cfif len(trim(url.message))>
+            <div class="alert alert-success">
+              <cfoutput>#url.message#</cfoutput>
+            </div>
+          </cfif>
+        </div>
 
 <cfelse>
 
