@@ -61,7 +61,7 @@
   
   <h1>Add a New Contact</h1>
 
-  <form id="form" action="#cgi.script_name#" method="post">
+  <form id="form" method="post">
     <div class="row form-group">
       <div class="col-xs-2">
         <label>Name (required)</label>
