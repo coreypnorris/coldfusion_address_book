@@ -7,7 +7,8 @@
   <cfoutput>
     <cfloop array="#contacts#" index="contact">
       #contact.name# - #contact.address# - #contact.phone#
-      <a href="editContact.cfm?id=#contact.id#"><span class="glyphicon glyphicon-pencil"></span></a><br />
+      <a href="editContact.cfm?id=#contact.id#"><span class="glyphicon glyphicon-pencil"></span></a>
+      <a href="deleteContact.cfm?id=#contact.id#"><span class="glyphicon glyphicon-trash"></span></a><br />
     </cfloop>
   </cfoutput>
 
