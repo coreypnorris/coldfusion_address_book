@@ -15,11 +15,11 @@
   </cfif> 
   
   <cfif !len(trim(form.address))>
-    <cfset errorBean.addError('A summary is required','startDate') />
+    <cfset errorBean.addError('A address is required','details') />
   </cfif> 
   
   <cfif !len(trim(form.phone))>
-    <cfset errorBean.addError('You need to provide a body','details') />
+    <cfset errorBean.addError('You need to provide a phone','details') />
   </cfif> 
 
   <cfif !errorBean.hasErrors()>
