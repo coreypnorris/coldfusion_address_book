@@ -20,9 +20,15 @@
         </nav>
         <div class="row-fluid">
           <cfif len(trim(url.message))>
-            <div class="alert alert-success">
-              <cfoutput>#url.message#</cfoutput>
-            </div>
+            <cfif #find("Saved", url.message)#>
+              <div class="alert alert-success">
+                <cfoutput>#url.message#</cfoutput>
+              </div>
+            <cfelseif #find("Deleted", url.message)#>
+              <div class="alert alert-danger">
+                <cfoutput>#url.message#</cfoutput>
+              </div>
+            </cfif>
           </cfif>
         </div>
 
